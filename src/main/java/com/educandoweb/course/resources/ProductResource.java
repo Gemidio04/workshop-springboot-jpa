@@ -13,8 +13,8 @@ import com.educandoweb.course.entities.Product;
 import com.educandoweb.course.services.ProductService;
 
 @RestController
-@RequestMapping(value="/users")
-public class UserResource {
+@RequestMapping(value="/products")
+public class ProductResource {
 	
 	@Autowired
 	private ProductService service;
