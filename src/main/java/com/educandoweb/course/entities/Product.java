@@ -1,6 +1,7 @@
 package com.educandoweb.course.entities;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -22,9 +23,9 @@ public class Product implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private BigInteger id;
 	private String name;
-	private String descripiton;
+	private String descripton;
 	private Double price;
 	private String imgUrl;
 
@@ -36,20 +37,19 @@ public class Product implements Serializable {
 	public Product() {
 	}
 
-	public Product(Long id, String name, String descripiton, Double price, String imgUrl) {
-		super();
+	public Product(BigInteger id, String name, String descripton, Double price, String imgUrl) {
 		this.id = id;
 		this.name = name;
-		this.descripiton = descripiton;
+		this.descripton = descripton;
 		this.price = price;
 		this.imgUrl = imgUrl;
 	}
 
-	public Long getId() {
+	public BigInteger getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(BigInteger id) {
 		this.id = id;
 	}
 
@@ -62,11 +62,11 @@ public class Product implements Serializable {
 	}
 
 	public String getDescripiton() {
-		return descripiton;
+		return descripton;
 	}
 
-	public void setDescripiton(String descripiton) {
-		this.descripiton = descripiton;
+	public void setDescripiton(String descripton) {
+		this.descripton = descripton;
 	}
 
 	public Double getPrice() {

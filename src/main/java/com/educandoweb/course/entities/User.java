@@ -1,6 +1,7 @@
 package com.educandoweb.course.entities;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id; 
+	private BigInteger id; 
 	private String name; 
 	private String email; 
 	private String phone; 
@@ -34,7 +35,7 @@ public class User implements Serializable {
 	public User() {
 	}
 	
-	public User(Long id, String name, String email, String phone, String password) {
+	public User(BigInteger id, String name, String email, String phone, String password) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
@@ -42,11 +43,11 @@ public class User implements Serializable {
 		this.password = password;
 	} 
 	
-	public long getId() {
+	public BigInteger getId() {
 		return id; 
 	}
 	
-	public void setId(Long id) {
+	public void setId(BigInteger id) {
 		this.id=id; 
 	}
 	

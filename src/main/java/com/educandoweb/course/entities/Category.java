@@ -1,6 +1,7 @@
 package com.educandoweb.course.entities;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -22,7 +23,7 @@ public class Category implements Serializable {
 		
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id; 
+	private BigInteger id; 
 	private String name;
 	
 	@JsonIgnore
@@ -32,16 +33,16 @@ public class Category implements Serializable {
 	public Category() {
 	}
 	
-	public Category(Long id, String name) {
+	public Category(BigInteger id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 
-	public Long getId() {
+	public BigInteger getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(BigInteger id) {
 		this.id = id;
 	}
 
